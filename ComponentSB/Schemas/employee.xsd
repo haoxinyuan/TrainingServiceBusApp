@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.hand.com/ComponentSB/Schemas/employee/v1.0"
+            targetNamespace="http://www.hand.com/ComponentSB/Schemas/employee/v1.0" elementFormDefault="qualified">
+  <xsd:element name="PaymentInfo">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="CardPaymentType" type="xsd:integer"/>
+        <xsd:element name="CardNum" type="xsd:integer"/>
+        <xsd:element name="ExpireDate" type="xsd:integer"/>
+        <xsd:element name="CardName" type="xsd:string"/>
+        <xsd:element name="BillingAddress">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="FirstName" type="xsd:string"/>
+              <xsd:element name="LastName" type="xsd:string"/>
+              <xsd:element name="AddressLine" type="xsd:integer"/>
+              <xsd:element name="City" type="xsd:string"/>
+              <xsd:element name="State" type="xsd:string"/>
+              <xsd:element name="ZipCode" type="xsd:integer"/>
+              <xsd:element name="PhoneNumber" type="xsd:integer"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="AuthorizationAmount" type="xsd:integer"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PaymentInfoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element type="xsd:string" name="instId"/>
+        <xsd:element type="xsd:string" name="returnStatus"/>
+        <xsd:element type="xsd:string" name="returnCode"/>
+        <xsd:element type="xsd:string" name="returnMsg"/>
+        <xsd:element type="xsd:string" name="requestTime"/>
+        <xsd:element type="xsd:string" name="responseTime"/>
+        <xsd:element type="xsd:string" name="attr1"/>
+        <xsd:element type="xsd:string" name="attr2"/>
+        <xsd:element type="xsd:string" name="attr3"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

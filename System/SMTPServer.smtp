@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-fragment xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:serverURL>10.0.1.8</con:serverURL>
+    <con:description/>
+    <con:portNumber>25</con:portNumber>
+    <con:username>esb@longi-silicon.com</con:username>
+    <con:password>Longi@123</con:password>
+</xml-fragment>
