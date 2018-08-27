@@ -12,19 +12,57 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>sbar</packaging>
   <description></description>
-  <properties>
-   <!--
-   These two properties are defined in com.oracle.maven:oracle-common, you can overwrite them here.
-   Users who do not want to add plain text password in their properties or 
-   pom file, should use the userConfigFile and userKeyFile options for deployment. -->
-   <oracleUsername>weblogic</oracleUsername>
-   <oraclePassword>welcome1</oraclePassword>
-  
-
-   <!-- Change the default values according to your environment -->
-   <oracleServerUrl>t3://localhost:7001</oracleServerUrl>
-   <oracleServerName>osb_server1</oracleServerName>
-   <oracleHome>/u01/oracle/Oracle/Middleware/Oracle_Home</oracleHome>
-</properties>
-
+  <profiles>
+    <profile>
+      <id>serverConfig-dev</id>
+      <activation>
+        <property>
+          <name>env</name>
+          <value>dev</value>
+        </property>
+      </activation>
+      <properties>
+        <oracleUsername>weblogic</oracleUsername>
+        <oraclePassword>welcome1</oraclePassword>
+        <!-- Change the default values according to your environment -->
+        <oracleServerUrl>t3://localhost:7001</oracleServerUrl>
+        <oracleServerName>osb_server1</oracleServerName>
+        <oracleHome>/u01/oracle/Oracle/Middleware/Oracle_Home</oracleHome>
+      </properties>
+    </profile>
+    <profile>
+      <id>serverConfig-sit</id>
+      <activation>
+        <property>
+          <name>env</name>
+          <value>sit</value>
+        </property>
+      </activation>
+      <properties>
+        <oracleUsername>weblogic</oracleUsername>
+        <oraclePassword>welcome1</oraclePassword>
+        <!-- Change the default values according to your environment -->
+        <oracleServerUrl>t3://localhost:7001</oracleServerUrl>
+        <oracleServerName>osb_server1</oracleServerName>
+        <oracleHome>/u01/oracle/Oracle/Middleware/Oracle_Home</oracleHome>
+      </properties>
+    </profile>
+    <profile>
+      <id>serverConfig-prod</id>
+      <activation>
+        <property>
+          <name>env</name>
+          <value>prod</value>
+        </property>
+      </activation>
+      <properties>
+        <oracleUsername>weblogic</oracleUsername>
+        <oraclePassword>welcome1</oraclePassword>
+        <!-- Change the default values according to your environment -->
+        <oracleServerUrl>t3://localhost:7001</oracleServerUrl>
+        <oracleServerName>osb_server1</oracleServerName>
+        <oracleHome>/u01/oracle/Oracle/Middleware/Oracle_Home</oracleHome>
+      </properties>
+    </profile>
+  </profiles>
 </project>
